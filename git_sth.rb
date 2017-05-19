@@ -12,6 +12,6 @@ system "git add -A"
 system "git commit -m \"#{info}\" "
 system "git push -u origin master"
 
-puts "push successful!"
+#puts "push successful!"
 
 
