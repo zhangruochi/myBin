@@ -8,10 +8,10 @@
 info = ARGV.join(" ")
 info = Time.now.to_s.split.first if info.length == 0
 
-puts info
-
 system "git add -A"
-system "git commit -m #{info}"
+system "git commit -m \"#{info}\" "
 system "git push -u origin master"
+
+puts "push successful!"
 
 
