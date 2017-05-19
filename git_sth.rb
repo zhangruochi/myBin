@@ -5,8 +5,8 @@
 #-email  : zrc720@gmail.com
 
 
-info = ARGV[0]
-info = Time.now.to_s.split.first unless info
+info = ARGV.join(" ")
+info = Time.now.to_s.split.first if info.length == 0
 
 system "git add -A"
 system "git commit -m #{info}"
