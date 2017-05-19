@@ -5,11 +5,11 @@
 #-email  : zrc720@gmail.com
 
 
-time = Time.now.to_s.split.first
-
+info = ARGV[0]
+info = Time.now.to_s.split.first unless info
 
 system "git add -A"
-system "git commit -m #{time}"
+system "git commit -m #{info}"
 system "git push -u origin master"
 
 
