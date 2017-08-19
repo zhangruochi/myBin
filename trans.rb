@@ -19,10 +19,10 @@ dir = ARGV[1]
 
 Net::SCP.start(IP,USER,password: PASS) do |scp|
     if para == "u"
-        scp.upload! dir, "upload",{recursive: true}
+        scp.upload! dir,".",{recursive: true}
         puts "upload successul......."
     elsif para == "d"
-        scp.download! dir,"download",{recursive: true}
+        scp.download! dir,".",{recursive: true}
         puts "download successul......"
     else
         puts "parameter error"
